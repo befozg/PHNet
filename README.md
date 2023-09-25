@@ -34,11 +34,7 @@ Also, we provide some pre-trained models called PHNet for demo usage.
 | Fine-tuned on FFHQH, 1024x1024    |   `checkpoints/`        | [ffhqh1024.pth](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/harmonization/ffhqh1024.pth) |
 | Fine-tuned on FFHQH, 512x512    |   `checkpoints/`        | [ffhqh1024.pth](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/harmonization/ffhqh512.pth) |
 
-<<<<<<< HEAD
-To run complete portrait transfer demo, also refer to (StyleMatte)[https://github.com/befozg/stylematte] to download matting network checkpoints. Place them in `checkpoints/` directory.
-=======
 To run complete portrait transfer demo, also refer to [StyleMatte](https://github.com/befozg/stylematte) to download matting network checkpoints. Place them in `checkpoints/` directory.
->>>>>>> 06e42aa (fixed configs, demo files)
 
 ## Train [TODO]
 You can use downloaded trained models, otherwise select the baseline and parameters for training`.
@@ -48,11 +44,7 @@ To train the model, execute the following command:
 python train.py
 ```
 
-<<<<<<< HEAD
-Refer to our ```config/train512.yaml``` or ```config/train1024.yaml``` for training details.
-=======
 Refer to our ```config/train.yaml```  for training details.
->>>>>>> 06e42aa (fixed configs, demo files)
 
 ## Test
 To test the model, execute the following command:
@@ -60,13 +52,7 @@ To test the model, execute the following command:
 ```bash
 python test.py
 ```
-
-<<<<<<< HEAD
-Refer to our ```config/test.yaml``` for training details.
-=======
 Refer to our ```config/test.yaml``` for inference details.
->>>>>>> 06e42aa (fixed configs, demo files)
-
 
 ## Run demo
 To run the demo app locally, execute the following command:
@@ -75,10 +61,7 @@ To run the demo app locally, execute the following command:
 python app.py
 ```
 
-<<<<<<< HEAD
-=======
 Refer to our ```config/demo.yaml``` for demo details.
->>>>>>> 06e42aa (fixed configs, demo files)
 You can enable link sharing option to create global link in ```app.py```. Then follow to ```http://127.0.0.1:7860``` on your localhost to try out the application.
 
 ## Authors and Credits
