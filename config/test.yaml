@@ -1,18 +1,26 @@
-grid_counts: [10, 5, 1]
-enc_sizes: [3, 16, 32, 64, 128, 256, 512]
-init_weights: [0.5, 0.5] # weights of local grided image and global harmonized
-init_value: 0.8
-skips: True
+world_size: 1
+experiment_name: 'TEST_BEST_CKPT'
+checkpoint_dir: "checkpoints/best_pure.pth"
+distributed_addr: "localhost"
+model:
+    grid_counts: [10, 5, 1]
+    enc_sizes: [3, 16, 32, 64, 128, 256, 512]
+    init_weights: [0.5, 0.5] # weights of local grided image and global harmonized
+    init_value: 0.8
+    skips: True
 device: 'cpu'
-checkpoint:
-  matting_onnx: "checkpoints/stylematte_720.onnx"
-  harmonizer: "checkpoints/best_pure.pth"
-  matting: "checkpoints/stylematte.pth"
-input:
-  image_size: 1024
-  composite_path: assets/comp.jpg
-  mask_path: assets/mask.png
-output:
-  path: assets/harmonized.jpg
-onnx: False
-image_size: 1024
+datasets:
+    iharmony: "/home/jovyan/datasets/iHarmony4/"
+    crop_size: 1024
+    # dataset_root: "/home/jovyan/datasets/iHarmony4/"
+    ffhqh: "/home/jovyan/datasets/synthetic_ffhq/"
+    dataset_root: "/home/jovyan/datasets/synthetic_ffhq/"
+    ffhq: "/home/jovyan/datasets/ffhq/images1024x1024/"
+    isTrain: False
+datasets_to_use_test: ["FFHQH"]
+batch_size: 4
+num_workers: 4
+log_dir: "log"
+disable_mixed_precision: False
+log_image_interval: 1000
+log_image_number: 4

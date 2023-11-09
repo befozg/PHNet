@@ -1,0 +1,18 @@
+grid_counts: [10, 5, 1]
+enc_sizes: [3, 16, 32, 64, 128, 256, 512]
+init_weights: [0.5, 0.5] # weights of local grided image and global harmonized
+init_value: 0.8
+skips: True
+device: 'cpu'
+checkpoint:
+  matting_onnx: "checkpoints/stylematte_720.onnx"
+  harmonizer: "checkpoints/best_pure.pth"
+  matting: "checkpoints/stylematte.pth"
+input:
+  image_size: 1024
+  composite_path: assets/comp.jpg
+  mask_path: assets/mask.png
+output:
+  path: assets/harmonized.jpg
+onnx: False
+image_size: 1024
